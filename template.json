@@ -1,0 +1,17 @@
+{
+  "name": "emscripten-wasm-cpp",
+  "repository": "https://github.com/tgm-templates/emscripten-wasm-cpp",
+  "description": "Emscripten C++ WebAssembly demo for Deno and Node.js",
+  "variables": [
+    {
+      "name": "moduleName",
+      "description": "WebAssembly Module Name"
+    }
+  ],
+  "files": [
+    "CMakeLists.txt",
+    "mod.ts",
+    "build.ts",
+    "README.md"
+  ]
+}
