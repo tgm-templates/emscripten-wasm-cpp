@@ -31,18 +31,7 @@ async function processModTs(wasmFile: string) {
     console.log("mod.ts proceeded successfully!")
 }
 
-async function convertEsModuleFile(jsFile: string) {
-    let jsCode = await Deno.readTextFile(jsFile);
-    if (jsCode.indexOf("utf-16le") > 0) {
-        jsCode = jsCode.replace("utf-16le", "utf-8");
-        jsCode = "var document={};\n" + jsCode;
-        await Deno.writeTextFile(jsFile, jsCode);
-        console.log(`Success to convert ${jsFile}!`)
-    }
-}
-
 if (existsSync(buildDir)) {
-    await convertEsModuleFile(jsFile);
     await processModTs(wasmFile);
 } else {
     console.log("Please use emcc_camke.sh build first!")
