@@ -1,5 +1,5 @@
-import {encode as base64} from "https://deno.land/std@0.74.0/encoding/base64.ts";
-import {existsSync} from "https://deno.land/std@0.74.0/fs/mod.ts";
+import {encode as base64} from "https://deno.land/std@0.88.0/encoding/base64.ts";
+import {existsSync} from "https://deno.land/std@0.88.0/fs/mod.ts";
 import {compress} from "https://deno.land/x/brotli@v0.1.4/mod.ts";
 
 let moduleName = "@moduleName@";
